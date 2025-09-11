@@ -511,13 +511,15 @@ body{
     height: 130%;
 }
 .blackresign{
+    outline : none;
+    border : none;
     position: absolute;
     font-size: 180%;
     top: -35%;
     width: 170%;
     height: 110%;
     transform: rotate(180deg);
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: #6e96bfff;
 }
 .black-text{
@@ -554,13 +556,15 @@ body{
     height: 130%;
 }
 .whiteresign{
+    outline : none;
+    border : none;
     position: absolute;
     font-size: 180%;
     background-color: rgb(151, 229, 250);
     color: rgb(255, 255, 255);
     width: 170%;
     height: 115%;
-    border-radius: 50px; 
+    border-radius: 10px; 
 }
 .white-text{
     position: absolute;
@@ -613,6 +617,7 @@ body{
     left: 90%;
     transform: translate(0%,40%);
 }
+
 
 
 }
