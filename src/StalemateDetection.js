@@ -348,11 +348,13 @@ let noBlackPiece = !blackpawn && !blackknight && !blackrook && !blackbishop && !
     let [bp3,bcr3,bcc3,bpr3,bpc3] = gameState[black_3];
     if(((wp1 == wp2 && wcr1 == wpr2 && wcc1 == wpc2) && 
         (wp2 == wp3 && wcr2 == wpr3 && wcc2 == wpc3) &&
-        (wp1 == wp3 && wcr1 == wcr3 && wcc1 == wcc3)
+        (wp1 == wp3 && wcr1 == wcr3 && wcc1 == wcc3) && 
+        !isWhiteincheck
       ) &&
       ((bp1 == bp2 && bcr1 == bpr2 && bcc1 == bpc2) && 
         (bp2 == bp3 && bcr2 == bpr3 && bcc2 == bpc3) &&
-        (bp1 == bp3 && bcr1 == bcr3 && bcc1 == bcc3)
+        (bp1 == bp3 && bcr1 == bcr3 && bcc1 == bcc3) &&
+        !isBlackincheck
       )
     ){
       return true;
@@ -427,3 +429,4 @@ let noBlackPiece = !blackpawn && !blackknight && !blackrook && !blackbishop && !
     Checkmate.play();
   }
 }
+
